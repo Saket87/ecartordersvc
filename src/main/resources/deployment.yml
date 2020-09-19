@@ -6,13 +6,13 @@ metadata:
     name: ecartordersvc
 spec:
   ports:
-    - nodePort: 30163
+    - loadBalancer: 30164
       port: 8080
       targetPort: 8080
       protocol: TCP
   selector:
     app: ecartordersvc
-  type: NodePort
+  type: LoadBalancer
 ---
 apiVersion: apps/v1
 kind: Deployment
